@@ -1,0 +1,40 @@
+
+// GENERAL SETTINGS 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+$container-size: calc(100% - 350px);
+
+$wrapper-size: calc(100% - 200px);
+
+$text-bloc-space-between: 50px;
+
+$bg-color-primary: #f2f2f2;
+$bg-color-secondary: #1b1b1b;
+
+@mixin centerChild {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// TEXT SETTINGS 
+
+$font-family-primary: Inter, sans-serif;
+$font-family-secondary: Merriweather, sans-serif;
+
+// $font-size16: 1rem;
+$font-size12: 0.8rem;
+$font-size19: 1.2rem;
+$font-size22: 1.4rem;
+$font-size80: 5rem;
+
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$line-height120: 120%;
+$line-height250: 250%;
+
+$color-primary: #1b1b1b;
+$color-secondary: #f2f2f2;
+
