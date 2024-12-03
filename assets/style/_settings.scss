@@ -7,10 +7,17 @@ $container-size: calc(100% - 350px);
 
 $wrapper-size: calc(100% - 200px);
 
-$text-bloc-space-between: 50px;
+$bloc-space-between30: 30px;
+$bloc-space-between50: 50px;
+$bloc-side-space20: 20px;
+$bloc-side-space90: 90px;
+$bloc-side-space110: 110px;
 
 $bg-color-primary: #f2f2f2;
+$bg-color-primary-medium: #dedede;
 $bg-color-secondary: #1b1b1b;
+
+$transition : 0.4s ease-in-out;
 
 @mixin centerChild {
     display: flex;
@@ -23,13 +30,17 @@ $bg-color-secondary: #1b1b1b;
 $font-family-primary: Inter, sans-serif;
 $font-family-secondary: Merriweather, sans-serif;
 
-// $font-size16: 1rem;
 $font-size12: 0.8rem;
+$font-size16: 1rem;
 $font-size19: 1.2rem;
 $font-size22: 1.4rem;
+$font-size29: 1.8rem;
+$font-size72: 4.5rem;
 $font-size80: 5rem;
 
+$font-weight-light: 300;
 $font-weight-medium: 500;
+$font-weight-semi-bold: 600;
 $font-weight-bold: 700;
 
 $line-height120: 120%;
@@ -37,4 +48,9 @@ $line-height250: 250%;
 
 $color-primary: #1b1b1b;
 $color-secondary: #f2f2f2;
+
+// BUTTON SETTINGS 
+
+$button-primary-color: #1b1b1b;
+$button-primary-medium-color: #dedede;
 
