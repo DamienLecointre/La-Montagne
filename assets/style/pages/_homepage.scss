@@ -17,54 +17,71 @@
     grid-template-rows: auto;
 }
 
-h1 {
+h1,
+h2,
+h3,
+a {
     font-family: $font-family-primary;
+}
+
+h1,
+h2,
+h3 {
+    line-height: $line-height120;
+    @include textTransformCenter;
+}
+
+h2,
+h3,
+h4,
+a {
+    color: $color-primary;
+}
+
+h4,
+p {
+    font-family: $font-family-secondary;
+}
+
+h2,
+h3,
+a {
+    font-weight: $font-weight-semi-bold;
+}
+
+p,
+a {
+    font-size: $font-size19;
+}
+
+h1 {
     font-size: $font-size80;
     font-weight: $font-weight-bold;
-    line-height: $line-height120;
     color: $color-secondary;
-    text-align: center;
-    text-transform: uppercase;
     letter-spacing: 8px;
     padding-left: $bloc-side-space90;
     padding-right: $bloc-side-space90;
 }
 
 h2 {
-    font-family: $font-family-primary;
     font-size: $font-size72;
-    font-weight: $font-weight-semi-bold;
-    line-height: $line-height120;
-    color: $color-primary;
-    text-align: center;
-    text-transform: uppercase;
     padding: 0 $bloc-side-space90;
 }
 
 h3 {
-    font-family: $font-family-primary;
     font-size: $font-size29;
-    font-weight: $font-weight-semi-bold;
-    line-height: $line-height120;
-    color: $color-primary;
-    text-transform: uppercase;
-    text-align: center;
     padding: $bloc-space-between30 $bloc-side-space110;
 }
 
 h4 {
-    font-family: $font-family-secondary;
-    font-size: 16px;
+    font-size: $font-size16;
     font-weight: $font-weight-light;
-    color: $color-primary;
     text-align: center;
     text-transform: capitalize;
     font-style: italic;
 }
 
 p {
-    font-family: $font-family-secondary;
-    font-size: $font-size19;
     font-weight: $font-weight-medium;
     line-height: $line-height250;
     color: $color-secondary;
@@ -72,10 +89,6 @@ p {
 }
 
 a {
-    font-family: $font-family-primary;
-    font-size: 19px;
-    font-weight: 600;
-    color: $color-primary;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -90,7 +103,7 @@ button {
     outline: none;
     background: transparent;
     border: 2px solid $button-primary-color;
-    padding: 10px 40px;
+    padding: 0.65em 2.5em;
     transition: $transition;
     cursor: pointer;
     &:hover {
@@ -109,98 +122,102 @@ body {
         min-height: 100vh;
         display: grid;
         align-content: space-between;
-            .text-container {
-                padding-top: 120px;
-                    p {
-                        padding-top: $bloc-space-between50;
-                        padding-bottom: $bloc-space-between50;
-                        font-style: italic;
-                    }
-                    .container {
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                            a {
-                                height: 60px;
-                                width: 60px;
-                                @include centerChild;
-                                border: 2px solid $bg-color-primary;
-                                border-radius: 50%;
-            
-                                i {
-                                    font-size: $font-size19;
-                                    color: $color-secondary;
-                                }
-                            }    
-                    }
+    }
+
+    .text-container {
+        padding-top: 120px;
+            p {
+                padding-top: $bloc-space-between50;
+                padding-bottom: $bloc-space-between50;
+                font-style: italic;
             }
+    }
 
-            nav {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background: #f2f2f250;
-                    .text-link-container,
-                    .social-container {
-                        height: 100%;
-                        display: flex;
-                        align-items: center;
-                        cursor: pointer;
-                            li {
-                                padding: 30px 20px;
-                            }  
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+            a {
+                height: 60px;
+                width: 60px;
+                @include centerChild;
+                border: 2px solid $bg-color-primary;
+                border-radius: 50%;
+                    i {
+                        font-size: $font-size19;
+                        color: $color-secondary;
                     }
+            }    
+    }
 
-                    .text-link-container {
-                        li {
-                            height: 100%;
-                            transition: $transition;
-                            &:first-child {
-                                background: $bg-color-primary-medium;
-                                color: $color-primary;
-                            }
-                            &:hover {
-                                background: $bg-color-primary-medium;
-                            }
-                            &:hover a {
-                                color: $color-primary;
-                            }
-                            &:hover .texte-color {
-                                color: $color-secondary;
-                            }
-                            &:hover:first-child {
-                                background: initial;
-                            }
-                            .texte-color {
-                                color: $color-primary;
-                                transition: $transition;
-                            }
-                            a {
-                                font-family: $font-family-primary;
-                                font-size: $font-size12;
-                                font-weight: $font-weight-bold;
-                                letter-spacing: 1px;
-                                color: $color-secondary;
-                                text-transform: uppercase;
-                                transition: $transition;
-                            }
-                        }                                                   
-                    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f2f2f250;
+    }
+
+    .text-link-container,
+    .social-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+            li {
+                padding: 30px 20px;
+            }  
+    }
+
+    .text-link-container {
+        li {
+            height: 100%;
+            transition: $transition;
+            &:first-child {
+                background: $bg-color-primary-medium;
+                color: $color-primary;
+            }
+            &:hover {
+                background: $bg-color-primary-medium;
+            }
+            &:hover a {
+                color: $color-primary;
+            }
+            &:hover .texte-color {
+                color: $color-secondary;
+            }
+            &:hover:first-child {
+                background: initial;
+            }
+        }
+    }
+
+    .texte-color {
+        color: $color-primary;
+        transition: $transition;
+    }
+
+    a {
+        font-family: $font-family-primary;
+        font-size: $font-size12;
+        font-weight: $font-weight-bold;
+        letter-spacing: 1px;
+        color: $color-secondary;
+        text-transform: uppercase;
+        transition: $transition;
+    }
         
-                    .social-container {
-                        li {
-                            padding: 30px;
-                            transition: $transition;   
-                            &:hover {
-                                transform: scale(1.5);
-                            }
-                                a {
-                                    font-size: $font-size22;
-                                    color: $color-secondary;
-                                }
-                        }
-                    }
+    .social-container {
+        li {
+            padding: 30px;
+            transition: $transition;   
+            &:hover {
+                transform: scale(1.5);
             }
+            a {
+                font-size: $font-size22;
+                color: $color-secondary;
+            }
+        }
     }
 }
 

@@ -25,6 +25,11 @@ $transition : 0.4s ease-in-out;
     justify-content: center;
 }
 
+@mixin textTransformCenter {
+    text-align: center;
+    text-transform: uppercase;
+}
+
 // TEXT SETTINGS 
 
 $font-family-primary: Inter, sans-serif;
