@@ -17,10 +17,10 @@
         <section id="header-container">
             <div class=" header-wrapper container-side-padding">
                 <div class="text-container wrapper-side-padding">
-                    <h1>la montagne ça vous gagne</h1>
+                    <h1>la montagne <br> ça vous gagne</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, suscipit dolore. Nam qui, aspernatur nesciunt nostrum commodi optio quibusdam facilis!</p>
                     <div class="container">
-                        <a href=""><i class="fa-solid fa-arrow-down"></i></a>
+                        <a href="#footer-container"><i class="fa-solid fa-arrow-down"></i></a>
                     </div>
                 </div>
                 <nav>
@@ -65,7 +65,7 @@
 
         <section id="news">
             <div class="container-side-padding container-grid">
-                <div class="news-container">
+                <div class="news-container news-container-after">
                     <h4>april 24, 2017</h4>
                     <h3>sed magna ipsum faucibus</h3>
                     <div class="img1"></div>
@@ -89,19 +89,19 @@
     </main>
 
     <footer>
-        <section>
-            <div>
-                <div>
-                    <form action="">
-                        <div>
-                            <input type="text" id="name">
+        <section id="footer-container">
+            <div class="container-side-padding container-grid">
+                <div class="form-container-left">
+                    <form>
+                        <div class="form-part-container">
+                            <input type="text" id="name" required>
                             <label for="name">name</label>
                         </div>
-                        <div>
-                            <input type="email" name="email" id="email">
+                        <div class="form-part-container">
+                            <input type="email" name="email" id="email" required>
                             <label for="email">email</label>
                         </div>
-                        <div>
+                        <div class="form-part-container">
                             <textarea name="" id="message"></textarea>
                             <label for="message">message</label>
                         </div>
@@ -109,25 +109,27 @@
                     <input type="submit" value="send message">
                 </div>
                 
-                <div>
-                    <form action="">
-                        <div>
-                            <div>
-                                <input type="text" id="address" placeholder="1234 Somewhere Road #87257 Nashville, TN 00000-0000">
-                                <input type="text" id="phone" placeholder="(000) 000-0000">
-                                <input type="email" id="email" placeholder="info@untitled.ltd">
-                                <h5>social</h5>
-                            </div>
-                            <div>
-                                <label for="address">address</label>
-                                <label for="phone">phone</label>
-                                <label for="email">email</label>
-                                <div>
-                                    <a href=""><i class="fa-brands fa-twitter"></i></a>
-                                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                                    <a href=""><i class="fa-brands fa-github"></i></a>
-                                </div>
+                <div class="form-container-right">
+                    <form>
+                        <div class="form-part-container">
+                            <label for="address">address</label>
+                            <input type="text" id="address" placeholder="1234 Somewhere Road #87257 Nashville, TN 00000-0000" required>
+                        </div>
+                        <div class="form-part-container">
+                            <label for="phone">phone</label>
+                            <input type="text" id="phone" placeholder="(000) 000-0000" required>
+                        </div>
+                        <div class="form-part-container">
+                            <label for="email">email</label>
+                            <input type="email" id="email" placeholder="info@untitled.ltd" required>
+                        </div>
+                        <div class="remove form-part-container">
+                            <h5>social</h5>
+                            <div class="social-logo-container">
+                                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                <a href=""><i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                     </form>
