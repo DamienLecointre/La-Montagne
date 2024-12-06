@@ -4,8 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 $container-size: calc(100% - 350px);
+$container-size-responsive: calc(100% - 250px);
+$container-size-mobil-responsive: calc(100% - 60px);
 
 $wrapper-size: calc(100% - 200px);
+$wrapper-size-responsive: calc(100% - 100px);
+$wrapper-size-mobil-responsive: calc(100% - 60px);
 
 $bloc-space-between30: 30px;
 $bloc-space-between50: 50px;
@@ -25,11 +29,17 @@ $transition : 0.4s ease-in-out;
 $font-family-primary: Inter, sans-serif;
 $font-family-secondary: Merriweather, sans-serif;
 
+$font-size09: 0.6rem;
 $font-size12: 0.8rem;
 $font-size16: 1rem;
 $font-size19: 1.2rem;
 $font-size22: 1.4rem;
+$font-size24: 1.5rem;
 $font-size29: 1.8rem;
+$font-size32: 2rem;
+$font-size40: 2.5rem;
+$font-size48: 3rem;
+$font-size56: 3.5rem;
 $font-size72: 4.5rem;
 $font-size80: 5rem;
 
@@ -42,6 +52,7 @@ $line-height120: 120%;
 $line-height250: 250%;
 
 $color-primary: #1b1b1b;
+$color-primary-medium: #dedede;
 $color-secondary: #f2f2f2;
 
 // BUTTON SETTINGS 
@@ -52,3 +63,17 @@ $button-primary-medium-color: #dedede;
 // INPUT SETTINGS
 
 $input-padding: 10px 20px;
+
+// MEDIA SETTINGS
+
+$large: 1320px;
+$medium: 1160px;
+$little-medium: 980px;
+$little: 780px;
+$little-small: 465px;
+
+$media-large: "only screen and (max-width: #{$large})";
+$media-medium: "only screen and (max-width: #{$medium})";
+$media-little-medium: "only screen and (max-width: #{$little-medium})";
+$media-little: "only screen and (max-width: #{$little})";
+$media-little-small: "only screen and (max-width: #{$little-small})";
