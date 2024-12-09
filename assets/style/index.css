@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 .container-side-padding {
   padding-left: calc(50% - (100% - 350px) / 2);
   padding-right: calc(50% - (100% - 350px) / 2);
@@ -329,6 +333,25 @@ body {
           align-items: center;
   padding-top: 120px;
   margin-bottom: 40px;
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-animation: animTextContainer 1.5s ease-in-out forwards;
+          animation: animTextContainer 1.5s ease-in-out forwards;
+}
+@-webkit-keyframes animTextContainer {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes animTextContainer {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 #header-container .text-container p {
   font-style: italic;
@@ -416,6 +439,12 @@ body {
   #header-container .social-container li {
     padding: 15px 10px;
   }
+}
+#header-container .text-link-container:hover li:not(:hover) {
+  background: none;
+}
+#header-container .text-link-container:hover a:not(:hover) {
+  color: #f2f2f2;
 }
 @media only screen and (max-width: 980px) {
   #header-container .text-link-container {
@@ -709,26 +738,31 @@ body {
   font-size: 1rem;
   color: rgba(27, 27, 27, 0.5411764706);
   text-wrap: wrap;
+  overflow-wrap: normal;
 }
 #footer-container .form-container-right input::-moz-placeholder {
   font-size: 1rem;
   color: rgba(27, 27, 27, 0.5411764706);
   text-wrap: wrap;
+  overflow-wrap: normal;
 }
 #footer-container .form-container-right input:-ms-input-placeholder {
   font-size: 1rem;
   color: rgba(27, 27, 27, 0.5411764706);
   text-wrap: wrap;
+  overflow-wrap: normal;
 }
 #footer-container .form-container-right input::-ms-input-placeholder {
   font-size: 1rem;
   color: rgba(27, 27, 27, 0.5411764706);
   text-wrap: wrap;
+  overflow-wrap: normal;
 }
 #footer-container .form-container-right input::placeholder {
   font-size: 1rem;
   color: rgba(27, 27, 27, 0.5411764706);
   text-wrap: wrap;
+  overflow-wrap: normal;
 }
 @media only screen and (max-width: 780px) {
   #footer-container .form-container-right input::-webkit-input-placeholder {

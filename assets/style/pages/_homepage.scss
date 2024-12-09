@@ -1,6 +1,10 @@
 
 // GENERAL SETTINGS 
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container-side-padding {
     padding-left: calc(50% - $container-size / 2);
     padding-right: calc(50% - $container-size / 2);
@@ -255,6 +259,15 @@ body {
         align-items: center;
         padding-top: 120px;
         margin-bottom: 40px;
+        opacity: 0;
+        transform: translateY(40px);
+        animation: animTextContainer 1.5s ease-in-out forwards;
+        @keyframes animTextContainer {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
             p {
                 font-style: italic;
                 @include textSpaceBetween;
@@ -311,9 +324,12 @@ body {
     }
 
     .text-link-container {
-        // &:nth-child(1):hover > li {
-        //     background: initial;
-        // }
+        &:hover li:not(:hover) {
+            background: none;
+        }
+        &:hover a:not(:hover) {
+            color: $color-secondary;
+        }
         @media #{$media-little-medium} {
             width: 100%;
         }
@@ -560,6 +576,7 @@ body {
                 font-size: $font-size16;
                 color: #1b1b1b8a;
                 text-wrap: wrap;
+                overflow-wrap: normal;
                 @media #{$media-little} {
                     font-size: $font-size12;
                 }
